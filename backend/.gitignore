@@ -1,0 +1,13 @@
+# Environment Variables - NEVER commit these
+
+.env.local
+.env.*.local
+
+# Dependencies
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+

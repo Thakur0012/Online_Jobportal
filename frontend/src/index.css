@@ -1,0 +1,412 @@
+@import "tailwindcss";
+
+/* ─── Premium Design Tokens ─────────────────────────────── */
+:root {
+  --orange: #F97316;
+  --orange-dark: #EA580C;
+  --orange-light: #FB923C;
+  --orange-subtle: #FFF7ED;
+  --black: #0A0A0A;
+  --gray-900: #111827;
+  --gray-700: #374151;
+  --gray-500: #6B7280;
+  --gray-300: #D1D5DB;
+  --gray-100: #F3F4F6;
+  --gray-50: #F9FAFB;
+  --white: #FFFFFF;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04);
+  --shadow-lg: 0 10px 40px rgba(0,0,0,0.10), 0 4px 14px rgba(0,0,0,0.06);
+  --shadow-xl: 0 20px 60px rgba(0,0,0,0.12), 0 8px 24px rgba(0,0,0,0.08);
+  --shadow-orange: 0 8px 30px rgba(249,115,22,0.25), 0 2px 8px rgba(249,115,22,0.15);
+  --shadow-orange-lg: 0 16px 48px rgba(249,115,22,0.35), 0 4px 14px rgba(249,115,22,0.2);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+  --radius-3xl: 32px;
+}
+
+/* ─── Base ───────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @apply bg-white text-[#0A0A0A];
+}
+
+body {
+  @apply bg-white text-[#0A0A0A] selection:bg-orange-100 selection:text-orange-700;
+}
+
+/* Premium headings */
+h1, h2, h3 {
+  font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  @apply tracking-tight font-extrabold;
+}
+
+h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+  @apply tracking-tight font-bold;
+}
+
+/* ─── Premium Card Styles ────────────────────────────────── */
+.card-professional {
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-professional:hover {
+  border-color: rgba(249, 115, 22, 0.2);
+  box-shadow: var(--shadow-lg), 0 0 0 1px rgba(249, 115, 22, 0.08);
+  transform: translateY(-4px);
+}
+
+.card-glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-md);
+}
+
+/* ─── Premium Buttons ────────────────────────────────────── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--orange-light) 0%, var(--orange) 50%, var(--orange-dark) 100%);
+  background-size: 200% 100%;
+  background-position: 0% 0%;
+  color: white;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: -0.01em;
+  padding: 12px 24px;
+  border-radius: var(--radius-lg);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-orange);
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background-position: 100% 0%;
+  box-shadow: var(--shadow-orange-lg);
+  transform: translateY(-2px);
+}
+
+.btn-primary:active {
+  transform: translateY(0px) scale(0.98);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--black);
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 12px 24px;
+  border-radius: var(--radius-lg);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background: var(--gray-900);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline-orange {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--orange);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 11px 23px;
+  border-radius: var(--radius-lg);
+  border: 1.5px solid rgba(249, 115, 22, 0.4);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-outline-orange:hover {
+  background: var(--orange);
+  color: white;
+  border-color: var(--orange);
+  box-shadow: var(--shadow-orange);
+  transform: translateY(-1px);
+}
+
+.btn-navy {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--black);
+  color: white;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: var(--radius-lg);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+/* ─── Section Labels ─────────────────────────────────────── */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--orange);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.section-label::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 2px;
+  background: var(--orange);
+  border-radius: 2px;
+}
+
+/* ─── Gradient Utilities ─────────────────────────────────── */
+.text-gradient-orange {
+  background: linear-gradient(135deg, var(--orange-light) 0%, var(--orange) 40%, var(--orange-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-navy {
+  background: linear-gradient(135deg, #111827, #374151);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Badges ─────────────────────────────────────────────── */
+.badge-orange {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--orange-subtle);
+  color: var(--orange-dark);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 4px 12px;
+  border-radius: 100px;
+  border: 1px solid rgba(249, 115, 22, 0.15);
+}
+
+/* ─── Navbar glass effect ────────────────────────────────── */
+.navbar-glass {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.05);
+}
+
+/* ─── Premium Input ──────────────────────────────────────── */
+.input-premium {
+  width: 100%;
+  background: var(--gray-50);
+  border: 1.5px solid var(--gray-200, #E5E7EB);
+  border-radius: var(--radius-lg);
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--black);
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.input-premium:focus {
+  background: white;
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+}
+
+/* ─── Premium Tag/Pill ───────────────────────────────────── */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--gray-100);
+  color: var(--gray-700);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 100px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tag:hover {
+  background: var(--orange);
+  color: white;
+  border-color: var(--orange);
+}
+
+/* ─── Divider ────────────────────────────────────────────── */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gray-200, #E5E7EB), transparent);
+}
+
+/* ─── Skeleton ───────────────────────────────────────────── */
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius-md);
+}
+
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ─── Scrollbar ─────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--gray-50); }
+::-webkit-scrollbar-thumb { background: var(--gray-300); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: var(--orange); }
+
+/* ─── Animations ─────────────────────────────────────────── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+
+@keyframes pulse-ring {
+  0%   { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-float { animation: float 5s ease-in-out infinite; }
+.animate-gradient {
+  background-size: 300% 300%;
+  animation: gradient-shift 6s ease infinite;
+}
+
+/* ─── Input focus ring ───────────────────────────────────── */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+}
+
+/* ─── Dark hero search placeholder ──────────────────────── */
+.hero-input::placeholder {
+  color: rgba(255,255,255,0.28);
+}
+
+/* ─── Hover underline accent ─────────────────────────────── */
+.hover-accent-line {
+  position: relative;
+}
+.hover-accent-line::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #FB923C, #F97316);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+.hover-accent-line:hover::after {
+  width: 3rem;
+}
+
+/* ─── Utility ─────────────────────────────────────────────── */
+.custom-scrollbar::-webkit-scrollbar { width: 4px; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: var(--gray-200, #E5E7EB); border-radius: 10px; }
+
+/* ─── Job Description Robustness ─────────────────────────── */
+.job-description-text {
+  text-align: left !important;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.job-description-text p, 
+.job-description-text div, 
+.job-description-text span, 
+.job-description-text li {
+  text-align: left !important;
+}
+
+.job-description-text img,
+.job-description-text table,
+.job-description-text iframe {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Ensure horizontal scroll on tables if they still overflow */
+.job-description-text table {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ─── Premium Hero Glow ───────────────────────────────────── */
+.hero-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(249,115,22,0.12) 0%, transparent 65%);
+  pointer-events: none;
+  filter: blur(40px);
+}
+
+/* ─── Orange Underline ────────────────────────────────────── */
+.underline-orange {
+  position: relative;
+  display: inline-block;
+}
+.underline-orange::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--orange), var(--orange-light));
+  border-radius: 2px;
+}
