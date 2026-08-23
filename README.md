@@ -635,31 +635,6 @@ Potential improvements include:
 
 ---
 
-## 📸 Screenshots
-
-Add screenshots of the platform to a `screenshots` directory:
-
-```text id="e1w6qy"
-screenshots/
-├── home.png
-├── jobs.png
-├── job-details.png
-├── dashboard.png
-├── career-roadmap.png
-├── interview-coach.png
-├── resume-scorer.png
-├── community.png
-└── admin-dashboard.png
-```
-
-Example:
-
-```markdown id="h3v9kx"
-![Finance Bandhu Home](screenshots/home.png)
-```
-
----
-
 ## 📌 Project Status
 
 **Full-Stack Web Application**
