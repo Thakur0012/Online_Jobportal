@@ -1,6 +1,6 @@
-# 💼 Finance Bandhu – Career & Professional Growth Platform
+# 💼 Online JobPortal – Career & Professional Growth Platform
 
-**Finance Bandhu** is a full-stack career and professional-growth platform designed to help users discover job opportunities, manage applications, improve their resumes, prepare for interviews, explore career paths, and connect with a professional community.
+**Job Portal** is a full-stack career and professional-growth platform designed to help users discover job opportunities, manage applications, improve their resumes, prepare for interviews, explore career paths, and connect with a professional community.
 
 The platform combines a modern React frontend with a Node.js and Express backend to provide a complete experience for **job seekers, employers, and administrators**.
 
@@ -659,6 +659,6 @@ If you find this project useful or interesting, consider giving the repository a
 
 ---
 
-### 💼 Finance Bandhu
+### 💼 Job portal
 
 **Helping professionals discover opportunities, build better careers, and grow professionally.**
