@@ -648,8 +648,11 @@ The project includes authentication, job management, application workflows, care
 ## 👨‍💻 Author
 
 **Purushottam Thakur**
+
 GitHub: [@Thakur0012](https://github.com/Thakur0012)
+
 **Yash Thorat**
+
 GitHub: [@Yashhthorat](https://github.com/Yashhthorat)
 ---
 
